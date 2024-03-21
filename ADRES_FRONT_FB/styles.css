@@ -1,0 +1,134 @@
+/* Paleta de colores de la ADRES*/
+:root {
+    --color-fondo-principal: #f4f4f4;
+    --color-texto: #2C3358;
+    --color-encabezado: #e6f0ff;
+    --color-boton: #0055b8;
+    --color-boton-hover: #003366;
+    --color-modal: #fefefe;
+    --color-boton-cerrar: #aaa;
+    --color-boton-cerrar-hover: black;
+    --color-boton-form: #24a19c;
+    --color-boton-form-hover: #1d8082;
+    --color-tabla-encabezado: #24a19c;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto);
+}
+
+.budget {
+   bottom: 10px;
+}
+
+
+header {
+    background-color: var(--color-encabezado);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el botón que muestra el formulario de registro */
+#show-form-btn {
+    background-color: var(--color-boton);
+    color: white;
+    padding: 10px 20px;
+    margin: 20px auto; /* Centrado en la página */
+    border: none;
+    cursor: pointer;
+    display: block; /* Se muestra como un bloque */
+    width: max-content; /* Toma el ancho de su contenido */
+}
+
+#show-form-btn:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Estilo para la ventana modal donde estará el formulario */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: var(--color-modal);
+    margin: 10% auto; /* Centrado verticalmente en la pantalla */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Ancho del contenido del modal */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: var(--color-boton-cerrar);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--color-boton-cerrar-hover);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para los campos del formulario dentro del modal */
+#form-container input,
+#form-container label,
+#form-container textarea,
+#form-container button {
+    display: block; /* Se muestra en una nueva línea cada uno */
+    width: 90%; /* Ancho basado en el contenedor padre */
+    margin: 10px auto; /* Margen superior e inferior y centrado horizontal */
+}
+
+#form-container button {
+    width: auto; /* Ancho basado en el contenido del botón */
+    padding: 10px 20px; /* Relleno del botón */
+    margin: 10px 0; /* Solo margen superior e inferior */
+}
+
+/* Estilo para la tabla de listado de adquisiciones */
+#list {
+    margin: 20px auto; /* Margen superior e inferior y centrado horizontal */
+    width: 80%; /* Ancho basado en el ancho de la ventana */
+}
+
+table {
+    width: 100%; /* La tabla ocupa todo el ancho de su contenedor */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-tabla-encabezado);
+    color: white;
+}
+
+#logo-header {
+    transform: scale(0.6); /* Reduce el tamaño al 80% del original*/
+}
+
+#acquisitions-list {
+    margin-top: 20px; /* Espacio arriba de la tabla */
+    margin-bottom: 20px; /* Espacio debajo de la tabla */
+}

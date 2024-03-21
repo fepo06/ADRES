@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Adquisiciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Images/Logo_ADRES.png" alt="" id="logo-header">
+    </header>
+    <main>
+        <button id="show-form-btn">Agregar Nueva Adquisición</button>
+
+        <div id="form-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-form-btn" class="close">&times;</span>
+                <section id="form">
+                    <h2>Registrar Nueva Adquisición</h2>
+                    <form id="adquisiciones-form">
+                        
+                        <label for="budget">Presupuesto:</label>
+                        <input type="number" id="budget" name="budget" placeholder="Presupuesto" min="100000" step="100000" required>
+
+                        <label for="administrativeUnit">Unidad Administrativa:</label>
+                        <input type="text" id="administrativeUnit" name="administrativeUnit" placeholder="Unidad Administrativa" required>
+
+                        <label for="itemType">Tipo de Bien o Servicio:</label>
+                        <input type="text" id="itemType" name="itemType" placeholder="Tipo de Bien o Servicio" required>
+
+                        <label for="quantity">Cantidad:</label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Cantidad" min="1" step="1" required>
+
+                        <label for="unitValue">Valor Unitario:</label>
+                        <input type="number" id="unitValue" name="unitValue" placeholder="Valor Unitario" min="1000" step="1000" required>
+
+                        <label for="acquisitionDate">Fecha de Adquisición:</label>
+                        <input type="date" id="acquisitionDate" name="acquisitionDate" required>
+
+                        <label for="supplier">Proveedor:</label>
+                        <input type="text" id="supplier" name="supplier" placeholder="Proveedor" required>
+
+                        <label for="documentation">Documentación:</label>
+                        <textarea id="documentation" name="documentation" placeholder="Documentación"></textarea>
+
+
+                        <button type="submit">Registrar</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <section id="list">
+            <h2>Listado de Adquisiciones</h2>
+
+            <div id="filters">
+                <label for="fecha-desde">Desde:</label>
+                <input type="date" id="fecha-desde" placeholder="Fecha desde">
+                <label for="fecha-hasta">Hasta:</label>
+                <input type="date" id="fecha-hasta" placeholder="Fecha hasta">
+                <input type="text" id="proveedor" placeholder="Proveedor">
+                <input type="text" id="unidad-administrativa" placeholder="Unidad Administrativa">
+                <button id="buscar-adquisiciones" onclick="filtrarAdquisiciones()">Buscar</button>
+            </div>
+        
+
+            <table id="acquisitions-list">
+                <!-- Encabezados de la tabla y los elementos se cargarán dinámicamente en el script -->
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
